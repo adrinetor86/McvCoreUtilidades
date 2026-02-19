@@ -14,6 +14,8 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+//AÑADIMOS LOS FICHEROS ESTATICOS
+app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
