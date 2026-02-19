@@ -38,6 +38,8 @@ public class UploadFilesController : Controller
         }
 
         ViewData["MENSAJE"] = "Fichero subido a " + path;
+
+        ViewData["FILENAME"] = fileName;
         
         return View();
     }
