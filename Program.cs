@@ -1,8 +1,16 @@
+using McvCoreUtilidades.Helpers;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddMemoryCache();
+//AÑADIMOS EL HELPER
+builder.Services.AddSingleton<HelperPathProvider>();
+
+builder.Services.AddHttpContextAccessor(); 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
